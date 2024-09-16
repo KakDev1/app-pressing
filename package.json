@@ -23,16 +23,27 @@
       "output": "dist"
     },
     "win": {
-      "target": ["nsis"]
+      "target": [
+        "nsis"
+      ]
     },
     "mac": {
-      "target": ["dmg"]
+      "target": [
+        "dmg"
+      ]
     },
     "linux": {
-      "target": ["AppImage"]
+      "target": [
+        "AppImage"
+      ]
     }
   },
-  "keywords": ["pressing", "gestion", "electron", "desktop"],
+  "keywords": [
+    "pressing",
+    "gestion",
+    "electron",
+    "desktop"
+  ],
   "author": "Karim Kompissi",
   "license": "ISC",
   "devDependencies": {
