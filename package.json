@@ -1,16 +1,44 @@
 {
   "name": "app-pressing",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Application de gestion de pressing",
+  "main": "src/main.js",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux",
+    "lint": "eslint .",
+    "format": "prettier --write ."
   },
-  "keywords": [],
-  "author": "",
+  "build": {
+    "appId": "com.karimkompissi.apppressing",
+    "productName": "App Pressing",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": ["nsis"]
+    },
+    "mac": {
+      "target": ["dmg"]
+    },
+    "linux": {
+      "target": ["AppImage"]
+    }
+  },
+  "keywords": ["pressing", "gestion", "electron", "desktop"],
+  "author": "Karim Kompissi",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "electron": "^32.1.0"
+    "electron": "^32.1.0",
+    "electron-builder": "^25.0.5",
+    "eslint": "^8.56.0",
+    "prettier": "^3.3.3"
   }
 }
